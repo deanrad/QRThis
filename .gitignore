@@ -1,0 +1,17 @@
+*~HEAD*
+#*#
+*#*
+*.bak
+*~
+*.cache
+.dotest/*
+log/*
+tmp/*
+db/*.sqlite3
+coverage/*
+doc/app/*
+doc/plugins/*
+*database.yml*
+/tmp/spec_server.pid
+db/*.sqlite3
+.bundle/*
