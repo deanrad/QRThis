@@ -1,0 +1,5 @@
+<% if qrcode %>
+<img src="<%= qrcode_url(qrcode) %>"/>
+<% else %>
+<%= link_to "Create QR Code", new_slogan_qrcode_path(slogan) %>
+<% end %>

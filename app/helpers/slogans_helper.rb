@@ -1,0 +1,2 @@
+module SlogansHelper
+end

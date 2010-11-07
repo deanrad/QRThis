@@ -1,0 +1,20 @@
+<h1>New QR Code</h1>
+
+
+<% form_for :qrcode, @qrcode, :url => "/slogans/#{@slogan.id}/qrcodes" do |f| %>
+<div>
+Slogan:  <%= f.text_field   :slogan_text, :value => @slogan.text %>	
+</div>
+
+<div>
+	<br/>
+Options:
+<ul>
+	<li><%= check_box_tag :foo %>Enable tracking</li>
+	<li><%= check_box_tag :foo %>Visitors can leave me a note</li>
+	</ul>
+  <%= f.hidden_field :ecc, :value => 'q' %>
+  <%= f.hidden_field :version, :value => '6' %>
+</div>
+  <%= f.submit "Make QR Code" %>
+<% end %>

@@ -1,0 +1,20 @@
+<h1>Listing slogans</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @slogans.each do |slogan| %>
+  <tr>
+    <td><%= slogan.text %></td>
+    <td><%= link_to 'Show', slogan %></td>
+    <td><%= link_to 'Edit', edit_slogan_path(slogan) %></td>
+    <td><%= link_to 'Destroy', slogan, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= render :partial => 'qrcode', :locals => {:slogan => slogan, :qrcode => slogan.qrcodes.first } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New slogan', new_slogan_path %>
