@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<merchandiseCollection>
+	<merchandise id="2" name="White T-Shirt" defaultCaption="White T-Shirt" printMethod="Light" defaultOrientation="Normal" defaultPerspective="Front" basePrice="14.99" marketplacePrice="22.00" sellPrice="22.00" discountAmount="0.00" currencyName="US Dollar" currencyCode="USD" currencySymbol="$" markdown="0" isOnSale="false" shortCaption="White T-Shirt" shortDescription="White T" stockAvailability="In Stock." stockAvailabilityId="1" allowAddToCart="true" availability="All Stores | Permanent Item" availabilityId="3" wildcardBlankProductUrl="http://content4.cpcache.com/products/prodblanks/2_(perspective label)_c(color id).jpg" defaultBlankProductUrl="http://content5.cpcache.com/products/prodblanks/2_F_c1.jpg" categoryId="112" categoryCaption="Shirts (short)" defaultMediaRegion="FrontCenter">
+		<description><![CDATA[The most comfortable t-shirt ever! Our 100% cotton, Hanes Authentic Tagless T-Shirt is preshrunk, durable and guaranteed. 
+<ul><li>6.1 oz. 100% cotton</li>
+<li>Standard fit</li></ul>]]></description>
+		<color id="1" name="White" default="true" colorSwatchUrl="/content/marketplace/img/swatches/swatch_longsleevetshirt_white.gif"/>
+		<size id="4" name="Small" fullName="Small" shortName="S" default="false" priceDifference="0"/>
+		<size id="5" name="Medium" fullName="Medium" shortName="M" default="false" priceDifference="0"/>
+		<size id="6" name="Large" fullName="Large" shortName="L" default="true" priceDifference="0"/>
+		<size id="7" name="X-Large" fullName="X-Large" shortName="XL" default="false" priceDifference="0"/>
+		<size id="35" name="2X-Large" fullName="2X-Large (+$3.00)" shortName="2XL" default="false" priceDifference="3"/>
+		<size id="9" name="3X-Large" fullName="3X-Large (+$3.00)" shortName="3XL" default="false" priceDifference="3"/>
+		<size id="10" name="4X-Large" fullName="4X-Large (+$3.00)" shortName="4XL" default="false" priceDifference="3"/>
+		<mediaRegion defaultAlignment="TopCenter" width="10" height="10" displayName="Center" dpi="100" hasFullBleed="false" minHeight="0" minWidth="0" name="BackCenter"/>
+		<mediaRegion defaultAlignment="TopCenter" width="10" height="4" displayName="Shoulder" dpi="100" hasFullBleed="false" minHeight="0" minWidth="0" name="BackShoulder"/>
+		<mediaRegion defaultAlignment="TopCenter" width="6" height="6" displayName="Pocket" dpi="100" hasFullBleed="false" minHeight="0" minWidth="0" name="FrontPocket"/>
+		<mediaRegion defaultAlignment="TopCenter" width="10" height="10" displayName="Center" dpi="100" hasFullBleed="false" minHeight="0" minWidth="0" name="FrontCenter"/>
+		<perspective name="Front" pixelWidth="480" pixelHeight="480" sortOrder="1" isEditable="true" defaultMediaRegion="FrontCenter" label="F">
+			<showsMediaRegion>FrontCenter</showsMediaRegion>
+			<showsMediaRegion>FrontPocket</showsMediaRegion>
+		</perspective>
+		<perspective name="Back" pixelWidth="480" pixelHeight="480" sortOrder="2" isEditable="true" defaultMediaRegion="BackCenter" label="B">
+			<showsMediaRegion>BackCenter</showsMediaRegion>
+			<showsMediaRegion>BackShoulder</showsMediaRegion>
+		</perspective>
+		<miscNotes><![CDATA[<div id="miscNotesContainer"><div id="fitFact"><div class="fitTitle"><b>Fit:</b> <a href="javascript:launchHelp('/cp/info/help/help_fit.aspx','height=600,width=600,scrollbars=1')">Standard</a></div><div class="fitImage"><img src="/content/marketplace/img/fit_standard.gif" alt="Standard Fit" class="fitIcon" /></div>Not too tight, not too loose.</div><div id="md"></div><div id="fabric"><b>Fabric Thickness:</b><br /><img src="/content/marketplace/img/fabric_4.gif" class="fabricScale" alt=""/></div></div>]]></miscNotes>
+	</merchandise>
+</merchandiseCollection>
