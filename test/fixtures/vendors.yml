@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+cafe_press:
+  name: Cafe Press
+  type: CafePress
+  options: "{}"
+
+zazzle:
+  name: Zazzle
+  type: Zazzle
+  options: "{}"
+

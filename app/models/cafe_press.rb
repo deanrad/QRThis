@@ -1,0 +1,3 @@
+class CafePress < Vendor
+  
+end
