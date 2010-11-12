@@ -1,0 +1,13 @@
+* Per-user slogans, landing pages etc..
+
+* Images Storing subsystem
+** TODO http://myqrwear.com/images/md5_of_image_params.png  should be a route to get the PNG that avoids the database (necessitates writing to the filesystem, of course)
+
+
+* QR Code generation process
+** TODO Remove any confusing options from page (maybe hide under 'advanced options' section ? -Dean)
+
+* Products
+** TODO The workflow for choosing a product, assigning a qrcode to it, saving a URL that points to the product in the fulfillers API, needs to be fleshed out.
+** TODO 
+
