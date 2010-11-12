@@ -14,7 +14,6 @@ class QrcodesController < ApplicationController
   end
   def create
     @slogan = Slogan.find(params[:slogan_id]) if params[:slogan_id]
-debugger
     @qrcode = Qrcode.new()
     text = params[:qrcode][:slogan_text]
     @generator = RQRCode::QRCode.new( text, :size => params[:qrcode][:version].to_i, :level => params[:qrcode][:ecc].to_sym)
