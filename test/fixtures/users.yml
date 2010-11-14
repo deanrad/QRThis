@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+dean:
+  name: Dean
+  email: dean@example.com
+
+craig:
+  name: Craig
+  email: craig@example.com
