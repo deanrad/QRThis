@@ -9,9 +9,11 @@ class Slogan < ActiveRecord::Base
       opts[:ecc] ||= 'q'
       
       generator = RQRCode::QRCode.new( opts[:text], :size => opts[:size].to_i, :level => opts[:ecc].to_sym)
-      newqr.contents = generator.to_s
-      newqr.save!
-      proxy_owner.renderings.create(:qrcode_id => newqr.id)
+      Slogan.transaction do 
+        newqr.contents = generator.to_s
+        newqr.save!
+        proxy_owner.renderings.create(:qrcode_id => newqr.id)
+      end
       newqr
     end
   end
