@@ -1,21 +1,19 @@
-Given /^a (.*) available through a vendor$/ do | product |
-  @product = Slogan.new
+Given /^a user$/ do
+  @user = User.new
 end
 
-Given /^this shirt has (.*) options$/ do |opts|
-  puts "Hey maria - your shirt will be made with #{opts}"
-  pending # express the regexp above with the code you wish you had
+Given /^their text "(.*?)"$/ do |slogan_text|
+  @slogan_text = slogan_text
+  @slogan = Slogan.new(:text => @slogan_text)
 end
 
-Given /^a user that wants to see more information about a (.*)$/ do |product|
-  puts "User buying: #{product}"
-  # @user = User.first
-  # @product = TShirt.first
+Then /^we should save their text$/ do
+  @slogan.save!
+  @slogan.text.should == @slogan_text
 end
 
-Then /^a user should be able to see available colors$/ do
-  @product.avaiable_colors.length.should > 0
+Then /^we can create a qrcode encoding that text$/ do
+  @qrcode = @slogan.qrcodes.create_with_options( {} )
+  @qrcode.id.should_not == nil
+  @qrcode.contents.length.should > 1000
 end
-
-
-

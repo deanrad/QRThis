@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101112051131) do
+ActiveRecord::Schema.define(:version => 20101114194502) do
 
   create_table "qrcodes", :force => true do |t|
     t.text     "md5"
@@ -30,6 +30,13 @@ ActiveRecord::Schema.define(:version => 20101112051131) do
   create_table "slogans", :force => true do |t|
     t.integer  "user_id"
     t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
