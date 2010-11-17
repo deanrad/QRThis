@@ -1,3 +1,22 @@
+<h1>Your slogan: </h1>
 
-<%= link_to 'Edit', edit_slogan_path(@slogan) %> |
-<%= link_to 'Back', slogans_path %>
+<div>
+<%= text_area_tag :text, @slogan.text, I18n.t('slogan.text_area_options') %>
+</div>
+<%= link_to 'Back to all slogans', slogans_path %>
+
+<h2>QR Codes</h2>
+<div><%= link_to 'Create one!', new_slogan_qrcode_path(@slogan) %></div>
+
+<% if @slogan.qrcodes.length > 0 -%>
+	
+	<% @slogan.qrcodes.each_with_index do |qrcode, idx| -%>
+	  <h3><%= idx+1 %>.</h3>
+		<%= render :partial => 'slogans/qrcode', :locals => {:qrcode => qrcode}%> <!-- link_to 'Delete' -->
+		<%= link_to 'Design a Product with this code (TODO)', '#' %>
+	<% end -%>
+
+<% else %>
+	You have no QR codes for this slogan yet. 
+<% end %>
+

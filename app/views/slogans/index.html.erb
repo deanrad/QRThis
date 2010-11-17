@@ -1,4 +1,4 @@
-<h1>Listing slogans</h1>
+<h1>Your slogans</h1>
 
 <table>
   <tr>
@@ -7,9 +7,9 @@
 <% @slogans.each do |slogan| %>
   <tr>
     <td><%= slogan.text %></td>
-    <td><%= link_to 'Show', slogan %></td>
-    <td><%= link_to 'Edit', edit_slogan_path(slogan) %></td>
-    <td><%= link_to 'Destroy', slogan, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Details', slogan %></td>
+    <!-- td><%= link_to 'Edit', edit_slogan_path(slogan) %></td -->
+    <td><%= link_to 'Delete', slogan, :confirm => I18n.t('slogan.delete_confirm'), :method => :delete %></td>
     <td><%= render :partial => 'qrcode', :locals => {:slogan => slogan, :qrcode => slogan.qrcodes.first } %></td>
   </tr>
 <% end %>

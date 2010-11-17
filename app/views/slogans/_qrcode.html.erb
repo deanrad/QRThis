@@ -1,5 +1,15 @@
 <% if qrcode %>
 <img src="<%= qrcode_url(qrcode) %>"/>
+<br/>
+
+<!-- 
+Options:
+<% qrcode.rendering.options.each do |(name, val)| -%>
+  <dt><%= name %></dt>
+  <dd><%= val %></dd>
+<% end -%>
+-->
+
 <% else %>
 <%= link_to "Create QR Code", new_slogan_qrcode_path(slogan) %>
 <% end %>

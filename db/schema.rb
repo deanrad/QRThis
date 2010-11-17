@@ -9,7 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101114194502) do
+ActiveRecord::Schema.define(:version => 20101115234519) do
+
+  create_table "merges", :force => true do |t|
+    t.integer "qrcode_id"
+    t.integer "template_id"
+  end
 
   create_table "qrcodes", :force => true do |t|
     t.text     "md5"
@@ -30,6 +35,18 @@ ActiveRecord::Schema.define(:version => 20101114194502) do
   create_table "slogans", :force => true do |t|
     t.integer  "user_id"
     t.text     "text"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "templates", :force => true do |t|
+    t.string   "path"
+    t.string   "mime_type"
+    t.integer  "height"
+    t.integer  "width"
+    t.integer  "offset_left"
+    t.integer  "offset_top"
+    t.integer  "dpi"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

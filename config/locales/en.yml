@@ -3,3 +3,10 @@
 
 en:
   hello: "Hello world"
+  
+  slogan:
+    text_area_options:
+      cols: 80
+      rows: 2
+    delete_confirm: Delete this slogan and all associated qrcodes ? (This does not remove products you have purchased)
+    next_step_text: Encode Your Slogan in a QR Code

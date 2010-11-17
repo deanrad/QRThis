@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  path: new_orleans_guy.jpg
+  mime_type: image/jpeg
+  height: 480
+  width: 640
+  offset_left: 400
+  offset_top: 300
+  # dpi: 120

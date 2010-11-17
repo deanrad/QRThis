@@ -1,8 +1,8 @@
 <% form_for(@slogan) do |f| %>
   <%= f.error_messages %>
 
-	<%= f.label :text %><%= f.text_field :text %>
+	<%= f.label 'Your Message:' %><%= f.text_area :text, :rows => 2, :cols => 80  %>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit submit_msg %>
   </p>
 <% end %>

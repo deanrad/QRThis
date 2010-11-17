@@ -16,6 +16,11 @@ Feature: Ordering a QRcode product
     Given their text "FUCK MY HIGH SCHOOL"
 		Then we should save their text
 		And we can create a qrcode encoding that text
+		
+	Scenario: A user wants to embed their qrcode into a template
+	  Given a qrcode
+		And a template
+		Then we should be able to create a merge of the qrcode and template
 
 	# Scenario: Need more details about a T-shirt
 	# 	Given a user that wants to see more information about a T-shirt

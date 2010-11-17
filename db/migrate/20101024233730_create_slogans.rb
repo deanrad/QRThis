@@ -11,6 +11,7 @@ class CreateSlogans < ActiveRecord::Migration
       t.integer :qrcode_id
       t.integer :slogan_id
       
+      t.integer :options
       t.integer :ecc
       t.integer :size
     end

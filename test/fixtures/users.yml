@@ -7,3 +7,7 @@ dean:
 craig:
   name: Craig
   email: craig@example.com
+
+maria:
+  name: Maria
+  email: maria@example.com

@@ -22,6 +22,6 @@ class QrcodesController < ApplicationController
     
     @slogan.qrcodes << @qrcode
     
-    redirect_to slogans_path
+    redirect_to slogan_path(@slogan)
   end
 end

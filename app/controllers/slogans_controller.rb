@@ -20,7 +20,7 @@ class SlogansController < ApplicationController
 
     if @slogan.save
       flash[:notice] = 'Slogan was successfully created.'
-      redirect_to slogans_path
+      redirect_to new_slogan_qrcode_path(@slogan)
     end
   end
 
@@ -30,6 +30,14 @@ class SlogansController < ApplicationController
     if @slogan.update_attributes(params[:slogan])
       flash[:notice] = 'Slogan was successfully updated.'
     end
+  end
+  
+  def destroy
+    @slogan = Slogan.find(params[:id])
+    @slogan.qrcodes.each(&:destroy)
+    @slogan.renderings.each(&:destroy)
+    @slogan.destroy
+    redirect_to slogans_path
   end
 
 end
