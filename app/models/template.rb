@@ -24,7 +24,7 @@ class Template < ActiveRecord::Base
     draw.composite( self.offset_left, self.offset_top, qr.columns, qr.rows, qr )
     draw.draw(composite_image)
 
-    merge_filepath = "#{RAILS_ROOT}/public/images/merges/hello_maria1.png"    
+    merge_filepath = "#{RAILS_ROOT}/public/images/merges/#{merge_record.file_path}.png"    
     composite_image.write(merge_filepath)
 
     merge_filepath

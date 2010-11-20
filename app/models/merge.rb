@@ -5,4 +5,8 @@ class Merge < ActiveRecord::Base
   def md5
     Digest::MD5.hexdigest("template#{template.id}-qrcode#{qrcode.id}")
   end
+  
+  def file_path
+    "template#{template.id}-qrcode#{qrcode.id}"
+  end
 end
