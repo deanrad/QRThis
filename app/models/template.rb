@@ -15,12 +15,13 @@ class Template < ActiveRecord::Base
     qr = Magick::Image.from_blob( qrcode.contents ).first
     
     draw = Magick::Draw.new()
-    logger.info "Doing template at x/y resolution: #{templ.x_resolution}/#{templ.y_resolution}"
-    composite_image = Magick::Image.new( templ.x_resolution, templ.y_resolution)
+
+    composite_image = Magick::Image.new( templ.columns, templ.rows)
 
     # Composite template, then qr, into this draw object, then draw the draw into a new composite image
-    draw.composite( 0, 0, templ.x_resolution, templ.y_resolution, templ) #Magick::OverCompositeOp )
-    draw.composite( self.offset_left, self.offset_top, qr.x_resolution, qr.y_resolution, qr )
+    draw.composite( 0, 0, templ.columns, templ.rows, templ) #Magick::OverCompositeOp )
+    
+    draw.composite( self.offset_left, self.offset_top, qr.columns, qr.rows, qr )
     draw.draw(composite_image)
 
     merge_filepath = "#{RAILS_ROOT}/public/images/merges/hello_maria1.png"    
