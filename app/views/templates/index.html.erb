@@ -1,0 +1,9 @@
+<h1>Choose a Template !</h1>
+<% form_tag do |f| %>
+
+	<%= render :partial => 'template', :collection => @templates %>
+
+<br/>
+<%= submit_tag 'Next' %>
+<% end %>
+

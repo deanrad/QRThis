@@ -2,15 +2,15 @@
 
 cafe_press:
   name: Cafe Press
-  type: CafePress
+  type: Vendor::CafePress
   options: "{}"
 
 zazzle:
   name: Zazzle
-  type: Zazzle
+  type: Vendor::Zazzle
   options: "{}"
 
 us:
   name: Map Forward
-  type: Us
+  type: Vendor::Us
   options: "{}"

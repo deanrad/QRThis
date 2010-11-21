@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101120201053) do
+ActiveRecord::Schema.define(:version => 20101121160824) do
 
   create_table "merges", :force => true do |t|
     t.integer "qrcode_id"
@@ -58,6 +58,15 @@ ActiveRecord::Schema.define(:version => 20101120201053) do
     t.integer  "offset_left"
     t.integer  "offset_top"
     t.integer  "dpi"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_products", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.integer  "merge_id"
+    t.string   "product_options"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

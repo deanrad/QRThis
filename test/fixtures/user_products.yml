@@ -1,13 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  user_id: 1
-  product_id: 1
-  merge_id: 1
-  product_options: MyString
+  user: craig
+  product: black_t
+  product_options: ''
 
 two:
-  user_id: 1
-  product_id: 1
-  merge_id: 1
-  product_options: MyString
+  user: dean
+  product: white_t
+  product_options: ''
