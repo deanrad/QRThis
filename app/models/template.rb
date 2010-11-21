@@ -2,7 +2,7 @@ class Template < ActiveRecord::Base
   has_many :merges
   
   def filepath
-    "#{RAILS_ROOT}/templates/#{self.path}"
+    "#{RAILS_ROOT}/public/images/templates/#{self.path}"
   end
   
   # TODO move Template#merge into offline processing
