@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+black_t:
+  name: Black T-Shirt
+  vendor: us
+  retail_price: 25
+  printable_areas: '{"chest":[13.5, 16.5],"pocket":[5, 5]}'
+
+white_t:
+  name: White T-Shirt
+  vendor: us
+  retail_price: 20
+  printable_areas: '{"chest":[13.5, 16.5],"pocket":[5, 5]}'

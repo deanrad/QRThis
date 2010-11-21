@@ -10,3 +10,7 @@ zazzle:
   type: Zazzle
   options: "{}"
 
+us:
+  name: Map Forward
+  type: Us
+  options: "{}"

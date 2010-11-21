@@ -9,11 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101115234519) do
+ActiveRecord::Schema.define(:version => 20101120201053) do
 
   create_table "merges", :force => true do |t|
     t.integer "qrcode_id"
     t.integer "template_id"
+    t.string  "path"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.integer  "vendor_id"
+    t.integer  "retail_price"
+    t.string   "printable_areas"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "qrcodes", :force => true do |t|
@@ -28,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20101115234519) do
   create_table "renderings", :force => true do |t|
     t.integer "qrcode_id"
     t.integer "slogan_id"
+    t.integer "options"
     t.integer "ecc"
     t.integer "size"
   end

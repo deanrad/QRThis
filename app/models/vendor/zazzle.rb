@@ -1,4 +1,4 @@
-class Zazzle < Vendor
+class Vendor::Zazzle < Vendor
   
 end
   
