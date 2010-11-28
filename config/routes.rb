@@ -10,6 +10,10 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.root :controller => 'slogans', :action => 'index'
+  
+  # Make myqrwear.com/craig etc. work
+  map.forward ':user', :controller => 'magic', :action => 'index'
+  
   #map.connect ':controller/:action/:id'
   #map.connect ':controller/:action/:id.:format'
 end
