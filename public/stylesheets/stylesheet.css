@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0; padding:0; }
+
+html, body, #page-wrap { height: 100%; }
+
+
+body > #page-wrap {height: auto; min-height: 100%;}
+
+#main { padding-bottom: 150px; }  /* must be same height as the footer */
+
+
+html {
+	margin:0;
+	padding:0;
+	}
+
+body {
+	margin:0;
+	padding:0;
+	font-size:62.75%;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background:url(images/bg.jpg) repeat-x top;
+	}
+
+
+div#page-wrap {
+	width:962px;
+	background:url(images/header-nav.png) no-repeat;
+	margin: 0 auto;
+	}
+
+div#content-wrap {
+
+	
+	}
+
+
+
+
+
+/* Top Nav Drop Down Menu CSS */
+#menu {
+	width: 100%;
+	float: left;
+	padding-left:310px;
+	margin-top: 92px;
+	margin-bottom:21px;
+	text-align:center;
+	}
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	float: left;
+	}
+	
+#menu a, #menu h2 {
+	font:1.3em/1.1em Verdana, Geneva, sans-serif;
+	display: block;
+	margin: 0;
+	padding: 2px 3px;
+	width:206px;
+	}
+
+#menu h2 {
+	color: #000;
+	font-size:1.8em;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	padding-bottom:10px;
+	cursor:pointer;
+	}
+
+#menu a {
+	color: #fff;
+	background: #3a3a3a;
+	text-decoration: none;
+	text-align:left;
+	padding:5px 5px 5px 5px;
+	width:203px;
+	margin-left:3px;
+	}
+
+#menu a:hover {
+	color: #000;
+	background: #f3af00;
+	}	
+	
+	
+#menu li {
+	position: relative;
+	}
+
+#menu ul ul {
+	position: absolute;
+	z-index: 500;
+	}
+
+#menu ul ul ul {
+	top: 0;
+	left: 100%;
+	}
+	
+div#menu ul ul,
+div#menu ul li:hover ul ul,
+div#menu ul ul li:hover ul ul
+{display: none;}
+
+div#menu ul li:hover ul,
+div#menu ul ul li:hover ul,
+div#menu ul ul ul li:hover ul
+{display: block;}	
+
+/* End of Top Nav Drop Down Menu CSS */
+	
+
+	
+	
+	
+	
+	
+	
+	
+			
+div#login {
+	width:800px;
+	text-align:right;
+	float:right;
+	margin-right:8px;
+	padding-top:5px;
+	color:white;
+	font-size:1em;
+	}
+	div#login a {
+		color:white;
+		font-size:1.0em;
+		font-weight:normal;
+		text-decoration:none;
+		}
+		div#login a:hover, a:active {
+		color:#f3af00;
+		}			
+
+div#footer {
+	position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;	
+	background:#444444 repeat-x bottom;
+	color:#c7c7c7;
+	padding:10px 0 10px 0;
+	font-size:1.3em;
+	font-weight:bold;
+	}
+	div#footer a {
+		color:#c7c7c7;
+		font-size:1.0em;
+		font-weight:normal;
+		text-decoration:none;
+		}
+		div#footer a:hover, a:active {
+		color:#f3af00;
+		}			
+		
+table {
+	margin-left: auto;
+	margin-right: auto;
+	}
+		
+/* CLEAR FIX*/
+.clearfix:after {content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;}
+.clearfix {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+div#feature-wrap {
+	width:942px;
+	padding:10px 10px 20px 10px;
+	float:left;
+	
+	}
+	div#feature1 {
+		width:200px;
+		float:left;
+		}
+	div#feature2 {
+		width:200px;
+		float:left;
+		margin-left:47px;
+		}	
+	div#feature3 {
+		width:200px;
+		float:left;
+		margin-left:47px;
+		}	
+	div#feature4 {
+		width:200px;
+		float:left;
+		margin-left:47px;
+		}
+	div#feature-text {
+			padding:5px;
+			color: #666;
+			font-size:1.3em;
+			}
+			div#feature-text a {
+				color:black;
+				text-decoration:none;
+				font-weight: bold;
+				}
+				div#feature-text a:hover, a:active {
+					color:#666;
+					}
+img#feature {
+	border:5px solid #666;
+	width:190px;
+	height:190px;
+	}
+
+	
+div#bottom-ad {
+	float:left;
+	width:962px;
+	text-align:center;
+	padding:25px 0px 35px 0px;
+	border-top:1px #666 solid;
+	}
