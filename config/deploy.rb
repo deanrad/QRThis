@@ -48,7 +48,7 @@ set :user, 'chicagogrooves'
 namespace :configure do
   task :db do
     run "rm -f #{release_path}/config/database.yml"
-    run "ln -s #{shared_path}/chess_on_rails_database.yml #{release_path}/config/database.yml"
+    run "ln -s #{shared_path}/myqrwear.com_database.yml #{release_path}/config/database.yml"
   end
   task :env do
     run "rm -f #{release_path}/config/environments/production.rb"
