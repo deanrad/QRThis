@@ -1,17 +1,26 @@
-%h1 Choose a Product 
+%h1 QRWear Product Builder
 .instructions
 	First, pick a product you intend to put your qr code on.
 	You'll be able to customize options for the product later.
 	(This will give us an idea of what size an image you are going to be building.)
 
-- form_for UserProduct.new do |f| 
-	- @products.sort{|p1,p2| p1.name <=> p2.name}.each do |product|
-		.product
-			= f.radio_button 'product_id', product.id
-			= product.name
-			= image_tag "/images/products/#{product.name}.png", :alt => product.name, :height => 100, :width => 100
-			- if product.printable_area_names
-				= f.select( 'printable_area', options_for_select( product.printable_area_names||[], "M" ))
-			
-	= f.submit 'Add to Cart'
+#user_product_order
+	#product_form
+		%h2 Choose a Product
+		- form_for UserProduct.new do |f| 
+			- @products.sort{|p1,p2| p1.name <=> p2.name}.each do |product|
+				.product
+
+					= f.radio_button 'product_id', product.id
+					= product.name
+					= image_tag "/images/products/#{product.name}.png", :alt => product.name, :height => 100, :width => 100
+					- if product.printable_area_names
+						= f.select( 'printable_area', options_for_select( product.printable_area_names, "M" ))
+			#controls
+			= f.submit 'Add to Cart'
  
+	#design_form
+		%h2 Choose a Design
+		= render :partial => 'templates/choose'
+		
+		

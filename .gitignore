@@ -4,6 +4,7 @@
 *.bak
 *~
 *.cache
+.sass-cache/*
 .dotest/*
 log/*
 tmp/*

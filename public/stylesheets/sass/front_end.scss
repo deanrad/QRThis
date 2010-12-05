@@ -1,7 +1,14 @@
 body {
-  color: blue;
-  a {
-    font-weight: bold;
-    &:hover { color: red; }
-  }
+  
+	#user_product_order { 
+		font: {
+			size: 15pt
+		}
+		#product_form {
+		  float: left;
+		}
+		#design_form {
+			float: right;
+		}
+	}
 }

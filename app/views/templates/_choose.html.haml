@@ -1,0 +1,8 @@
+.instructions Choose a design from the list below
+
+#template_form
+	%ul
+	- ::Template.all.each do |template|
+		%li
+			= image_tag "/images/templates/#{template.path}", :height => 100, :width => 100
+			= radio_button_tag "template_id", template.path
