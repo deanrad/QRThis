@@ -3,9 +3,9 @@
 one:
   user: craig
   product: black_t
-  product_options: ''
+  printable_area: 'chest'
 
 two:
   user: dean
   product: white_t
-  product_options: ''
+  printable_area: 'pocket'

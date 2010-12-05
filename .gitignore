@@ -16,3 +16,4 @@ doc/plugins/*
 db/*.sqlite3
 .bundle/*
 public/images/merges
+public/stylesheets/front_end.css

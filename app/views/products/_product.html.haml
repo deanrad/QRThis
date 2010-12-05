@@ -1,8 +1,0 @@
-.product
-	= radio_button_tag 'product', product.id
-	= product.name
-	= image_tag "/images/products/#{product.name}.png", :alt => product.name, :height => 100, :width => 100
-	
-	- if product.printable_area_names
-		= "Print option:"
-		= select_tag 'area', options_for_select(product.printable_area_names)

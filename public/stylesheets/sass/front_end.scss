@@ -1,0 +1,7 @@
+body {
+  color: blue;
+  a {
+    font-weight: bold;
+    &:hover { color: red; }
+  }
+}
