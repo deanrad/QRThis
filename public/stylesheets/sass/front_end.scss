@@ -1,14 +1,17 @@
-body {
+body { }
   
-	#user_product_order { 
-		font: {
-			size: 15pt
-		}
-		#product_form {
-		  float: left;
-		}
-		#design_form {
-			float: right;
-		}
+#user_product_order { 
+	font: {
+		size: 15pt
+	}
+	#product_form {
+	  float: left;
+	}
+	#design_form {
+		float: right;
+	}
+	#controls {
+		clear: both;
+		text-align: center
 	}
 }

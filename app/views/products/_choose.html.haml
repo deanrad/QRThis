@@ -1,0 +1,7 @@
+- @products.sort{|p1,p2| p1.name <=> p2.name}.each do |product|
+	.product
+		= f.radio_button 'product_id', product.id
+		= product.name
+		= image_tag "/images/products/#{product.name}.png", :alt => product.name, :height => 100, :width => 100
+		- if product.printable_area_names
+			= f.select( 'printable_area', options_for_select( product.printable_area_names, "M" ))
