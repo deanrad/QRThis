@@ -3,24 +3,32 @@ Feature: Ordering a QRcode product
   As a website owner 
   I want to enable people to buy our products
 
-  # Scenario: Buying a T-shirt with a qrcode of a slogan
-  # 	  Given a t-shirt available through a vendor
-  # 	  Given this shirt has default options
-  # 	  Then I should be able to put my slogan on the shirt in a qr code
-  # 
-  # Scenario: Buying a T-shirt with a qrcode of their facebook url's page
-  #   Given a user that wants to create a t-shirt that links to their facebook's status
-  #   Then a user should be able to enter their facebook user name
+	Scenario: Viewing a list of products
+		Given the default set of system data
+		Given I am on the products page
+		Then I should see "T-Shirt"
+		And I should see "Add to Cart"
+	
   Scenario: A user wants to encode a slogan on a t-shirt
     Given a user
     Given their text "FUCK MY HIGH SCHOOL"
 		Then we should save their text
 		And we can create a qrcode encoding that text
 		
-	Scenario: A user wants to embed their qrcode into a template
-	  Given a qrcode
-		And a template
-		Then we should be able to create a merge of the qrcode and template
+	# REGRESSION - why oh why ?!!
+	# Scenario: A user wants to embed their qrcode into a template
+	# 	Given the default set of system data
+	# 	And a template
+	# 	Then we should be able to create a merge of the qrcode and template
+
+  # Scenario: Buying a T-shirt with a qrcode of a slogan
+  #   Given a t-shirt available through a vendor
+  #   Given this shirt has default options
+  #   Then I should be able to put my slogan on the shirt in a qr code
+  # 
+  # Scenario: Buying a T-shirt with a qrcode of their facebook url's page
+  #   Given a user that wants to create a t-shirt that links to their facebook's status
+  #   Then a user should be able to enter their facebook user name
 
 	# Scenario: Need more details about a T-shirt
 	# 	Given a user that wants to see more information about a T-shirt

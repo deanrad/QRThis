@@ -1,11 +1,24 @@
 # General step to call up a saved instance of any number of our classes
-Given /^a (user|qrcode|template|slogan)$/ do |model|
+Given /^a (user|qrcode|template|slogan|product)$/ do |model|
   instance_variable_set( "@#{model}", eval(model.classify).first )
 end
 
 Given /^their text "(.*?)"$/ do |slogan_text|
   @slogan_text = slogan_text
   @slogan = Slogan.new(:text => @slogan_text)
+end
+
+Given /^the default set of system data$/ do 
+  models = %w(products qrcodes merges templates)
+  Fixtures.create_fixtures("test/fixtures", models )
+  models.each do |m|
+    klass = m.singularize.classify.constantize
+    c = klass.send(:count)
+    $stderr.puts "#{c} #{m} in db"
+    
+    first_one = m.singularize.classify.constantize.send(:first)
+    instance_variable_set "@#{m.singularize}", first_one
+  end
 end
 
 Then /^we should save their text$/ do
@@ -20,6 +33,7 @@ Then /^we can create a qrcode encoding that text$/ do
 end
 
 Then /create a merge/ do 
+  
   @qrcode ||= Qrcode.first
   @template ||= Template.first
   

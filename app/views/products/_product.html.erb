@@ -1,0 +1,10 @@
+<div class='product'>
+	<%= radio_button_tag 'product', product.id %>
+	<%= product.name %>
+	<%= image_tag "/images/products/#{product.name}.png", :height => 100, :width => 100 %>
+	<ul>
+		<% product.printable_area_names.each do |a| -%>
+			<%= radio_button_tag "product_#{product.id}_printable_area", a %><%= a %>
+		<% end -%>
+	</ul>
+</div>

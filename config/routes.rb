@@ -5,9 +5,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :slogans do |slogans|
     slogans.resources :qrcodes
   end
-  map.resources :templates do |templates|
-    
-  end
+
+  map.resources :templates
+  map.resources :products
+  map.resources :user_products
   
   map.root :controller => 'slogans', :action => 'index'
   

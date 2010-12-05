@@ -1,0 +1,14 @@
+<h1>Choose a Product !</h1>
+<div class="instructions">
+	First, pick a product you intend to put your qr code on. 
+	You'll be able to customize options for the product later. 
+	This is just to give us an idea of what size an image you are going to be building.
+</div>
+
+<% form_tag do |f| %>
+	<%= render :partial => 'product', :collection => @products.sort{|p1,p2| p1.name <=> p2.name}, :locals=>{:f=>f} %>
+	<br/>
+	<%= link_to 'Add to Cart', new_user_product_path %>
+	<%= submit_tag 'Next' %>
+<% end %>
+

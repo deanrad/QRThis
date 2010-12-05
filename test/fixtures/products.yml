@@ -11,3 +11,8 @@ white_t:
   vendor: us
   retail_price: 20
   printable_areas: '{"chest":[13.5, 16.5],"pocket":[5, 5]}'
+
+tattoo:
+  name: Temporary Tattoo
+  vendor: us
+  retail_price: 5
