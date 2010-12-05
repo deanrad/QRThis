@@ -4,10 +4,9 @@
   You'll be able to customize options for the product later.
   This is just to give us an idea of what size an image you are going to be building.
 
-- form_tag do |f| 
-  = render :partial => 'product', 
-           :collection => @products.sort{|p1,p2| p1.name <=> p2.name}, 
-           :locals=>{:f=>f}
+- form_for :user_product do |f| 
+  = render :partial => 'product', :locals=>{:f=>f},
+					 :collection => @products.sort{|p1,p2| p1.name <=> p2.name}
 
-  = button_to 'Add to Cart', new_user_product_path
+  = f.submit 'Add to Cart'
  

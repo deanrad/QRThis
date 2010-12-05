@@ -11,6 +11,6 @@ class Product < ActiveRecord::Base
   memoize :printable_areas
   
   def printable_area_names
-    printable_areas ? printable_areas.keys : []
+    printable_areas && printable_areas.keys
   end
 end
