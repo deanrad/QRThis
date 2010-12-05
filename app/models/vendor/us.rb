@@ -1,3 +1,3 @@
-class Vendor::Us < Vendor
+class Us < Vendor
   
 end
