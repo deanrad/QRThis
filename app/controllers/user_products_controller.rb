@@ -5,7 +5,7 @@ class UserProductsController < ApplicationController
     @user_product = UserProduct.create(
       params[:user_product].delete_if do |k,v|
         not %w(product_id 
-               template_id
+               design_id
                printable_area).include? k
       end
     )

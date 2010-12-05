@@ -11,9 +11,21 @@
 
 ActiveRecord::Schema.define(:version => 20101121160824) do
 
+  create_table "designs", :force => true do |t|
+    t.string   "path"
+    t.string   "mime_type"
+    t.integer  "height"
+    t.integer  "width"
+    t.integer  "offset_left"
+    t.integer  "offset_top"
+    t.integer  "dpi"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "merges", :force => true do |t|
     t.integer "qrcode_id"
-    t.integer "template_id"
+    t.integer "design_id"
     t.string  "path"
   end
 
@@ -50,23 +62,11 @@ ActiveRecord::Schema.define(:version => 20101121160824) do
     t.datetime "updated_at"
   end
 
-  create_table "templates", :force => true do |t|
-    t.string   "path"
-    t.string   "mime_type"
-    t.integer  "height"
-    t.integer  "width"
-    t.integer  "offset_left"
-    t.integer  "offset_top"
-    t.integer  "dpi"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "user_products", :force => true do |t|
     t.integer  "user_id"
     t.integer  "product_id"
     t.integer  "merge_id"
-    t.integer  "template_id"
+    t.integer  "design_id"
     t.string   "printable_area"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -13,7 +13,7 @@
 	<% @slogan.qrcodes.each_with_index do |qrcode, idx| -%>
 	  <h3><%= idx+1 %>.</h3>
 		<%= render :partial => 'slogans/qrcode', :locals => {:qrcode => qrcode}%> <!-- link_to 'Delete' -->
-		<%= link_to 'Design a Product with this code (TODO)', templates_path(:qrcode => qrcode.id) %>
+		<%= link_to 'Design a Product with this code (TODO)', designs_path(:qrcode => qrcode.id) %>
 	<% end -%>
 
 <% else %>

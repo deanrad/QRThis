@@ -16,10 +16,10 @@ Feature: Ordering a QRcode product
 		And we can create a qrcode encoding that text
 		
 	# REGRESSION - why oh why ?!!
-	# Scenario: A user wants to embed their qrcode into a template
+	# Scenario: A user wants to embed their qrcode into a design
 	# 	Given the default set of system data
-	# 	And a template
-	# 	Then we should be able to create a merge of the qrcode and template
+	# 	And a design
+	# 	Then we should be able to create a merge of the qrcode and design
 
   # Scenario: Buying a T-shirt with a qrcode of a slogan
   #   Given a t-shirt available through a vendor

@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
     slogans.resources :qrcodes
   end
 
-  map.resources :templates
+  map.resources :designs
   map.resources :products
   map.resources :user_products
   

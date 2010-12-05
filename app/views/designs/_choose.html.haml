@@ -1,0 +1,9 @@
+.instructions Choose a design from the list below
+
+#design_form
+	%ul
+	- ::Design.all.each do |design|
+		%li.design
+			= image_tag "/images/designs/#{design.path}", :height => 100, :width => 100
+			= f.radio_button "design_id", design.id
+			

@@ -1,11 +1,11 @@
-class Template < ActiveRecord::Base
+class Design < ActiveRecord::Base
   has_many :merges
   
   def filepath
-    "#{RAILS_ROOT}/public/images/templates/#{self.path}"
+    "#{RAILS_ROOT}/public/images/designs/#{self.path}"
   end
   
-  # TODO move Template#merge into offline processing
+  # TODO move imagemagick compositing into offline processing
   def merge(qrcode)
     merge_record = self.merges.build( :qrcode => qrcode )
     
@@ -18,7 +18,7 @@ class Template < ActiveRecord::Base
 
     composite_image = Magick::Image.new( templ.columns, templ.rows)
 
-    # Composite template, then qr, into this draw object, then draw the draw into a new composite image
+    # Composite design, then qr, into this draw object, then draw the draw into a new composite image
     draw.composite( 0, 0, templ.columns, templ.rows, templ) #Magick::OverCompositeOp )
     
     draw.composite( self.offset_left, self.offset_top, qr.columns, qr.rows, qr )

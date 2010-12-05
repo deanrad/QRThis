@@ -1,6 +1,6 @@
-class CreateTemplates < ActiveRecord::Migration
+class CreateDesigns < ActiveRecord::Migration
   def self.up
-    create_table :templates do |t|
+    create_table :designs do |t|
       t.string :path
       t.string :mime_type
       t.integer :height
@@ -14,13 +14,13 @@ class CreateTemplates < ActiveRecord::Migration
     
     create_table :merges do |t|
       t.integer :qrcode_id
-      t.integer :template_id
+      t.integer :design_id
       t.string  :path
     end
     
   end
 
   def self.down
-    drop_table :templates
+    drop_table :designs
   end
 end

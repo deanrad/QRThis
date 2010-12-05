@@ -4,7 +4,7 @@ class CreateUserProducts < ActiveRecord::Migration
       t.integer :user_id
       t.integer :product_id
       t.integer :merge_id
-      t.integer :template_id
+      t.integer :design_id
       
       t.string :printable_area
 

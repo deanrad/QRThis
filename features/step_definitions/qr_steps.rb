@@ -1,5 +1,5 @@
 # General step to call up a saved instance of any number of our classes
-Given /^a (user|qrcode|template|slogan|product)$/ do |model|
+Given /^a (user|qrcode|design|slogan|product)$/ do |model|
   instance_variable_set( "@#{model}", eval(model.classify).first )
 end
 
@@ -9,7 +9,7 @@ Given /^their text "(.*?)"$/ do |slogan_text|
 end
 
 Given /^the default set of system data$/ do 
-  models = %w(products qrcodes merges templates)
+  models = %w(products qrcodes merges designs)
   Fixtures.create_fixtures("test/fixtures", models )
   models.each do |m|
     klass = m.singularize.classify.constantize
@@ -35,7 +35,7 @@ end
 Then /create a merge/ do 
   
   @qrcode ||= Qrcode.first
-  @template ||= Template.first
+  @design ||= Template.first
   
-  @merge = @template.merge(@qrcode)
+  @merge = @design.merge(@qrcode)
 end
